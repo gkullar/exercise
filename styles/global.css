@@ -1,0 +1,30 @@
+@import '_normalize.css';
+@import '_variables.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: var(--font-size);
+}
+
+h1 {
+  font-size: var(--size-xxl);
+}
+
+h2 {
+  font-size: var(--size-xl);
+}
+
+h3 {
+  font-size: var(--size-l);
+}

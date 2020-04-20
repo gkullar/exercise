@@ -1,0 +1,9 @@
+:root {
+  --font-size: 1rem;
+  --scale: 1.333;
+
+  --size-l: calc(var(--font-size) * var(--scale));
+  --size-xl: calc(var(--size-l) * var(--scale));
+  --size-xxl: calc(var(--size-xl) * var(--scale));
+  --size-s: calc(var(--font-size) / var(--scale));
+}
