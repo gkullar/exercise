@@ -1,4 +1,6 @@
 :root {
+  --base-spacing: 8px;
+
   --font-size: 1rem;
   --scale: 1.333;
 
