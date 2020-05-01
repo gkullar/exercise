@@ -1,0 +1,4 @@
+.container {
+  padding: calc(var(--base-spacing) * 2);
+  height: 100vh;
+}
