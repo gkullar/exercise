@@ -1,7 +1,9 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import Routine from '../components/routine';
+import Container from '../components/container';
 
-const Home: NextPage<{ userAgent: string }> = () => (
+const Home: NextPage = () => (
   <div>
     <Head>
       <title>Exercise</title>
@@ -12,10 +14,10 @@ const Home: NextPage<{ userAgent: string }> = () => (
         rel="stylesheet"
       ></link>
     </Head>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <p>Hello world!</p>
+    <Container>
+      <h1>Body Workout</h1>
+      <Routine />
+    </Container>
   </div>
 );
 
