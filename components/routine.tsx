@@ -1,7 +1,7 @@
-import { NextPage } from 'next';
+import { FunctionComponent } from 'react';
 import { Tab, TabGroup } from './tabs';
 
-const Routine: NextPage = () => {
+const Routine: FunctionComponent = () => {
   const reps = [
     [6, 6, 12, 24, 12],
     [8, 8, 16, 32, 16],

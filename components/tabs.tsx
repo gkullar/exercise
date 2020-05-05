@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from 'react';
+import { FunctionComponent, MouseEvent, useState } from 'react';
 import styles from './tabs.module.css';
 
 interface TabProps {
@@ -16,11 +16,11 @@ interface TabGroupProps {
   children: JSX.Element[];
 }
 
-export const TabLabel = ({
+export const TabLabel: FunctionComponent<TabLabelProps> = ({
   label,
   isActive,
   setActiveTabIndex
-}: TabLabelProps) => {
+}) => {
   const onClickEvent = (event: MouseEvent) => {
     event.preventDefault();
     setActiveTabIndex();
@@ -35,7 +35,7 @@ export const TabLabel = ({
   );
 };
 
-export const TabGroup = ({ children }: TabGroupProps) => {
+export const TabGroup: FunctionComponent<TabGroupProps> = ({ children }) => {
   const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
 
   const labels: JSX.Element[] = [];
@@ -63,4 +63,4 @@ export const TabGroup = ({ children }: TabGroupProps) => {
   );
 };
 
-export const Tab = ({ children }: TabProps) => children;
+export const Tab: FunctionComponent<TabProps> = ({ children }) => children;

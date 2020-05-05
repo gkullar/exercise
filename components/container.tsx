@@ -1,10 +1,11 @@
+import { FunctionComponent } from 'react';
 import styles from './container.module.css';
 
 interface Props {
   children: JSX.Element[];
 }
 
-const Container = ({ children }: Props) => (
+const Container: FunctionComponent<Props> = ({ children }) => (
   <div className={styles.container}>{children}</div>
 );
 
