@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import Results from '../components/results';
 import Routine from '../components/routine';
 import Container from '../components/container';
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => (
     <Container>
       <h1>Body Workout</h1>
       <Routine />
+      <Results />
     </Container>
   </div>
 );

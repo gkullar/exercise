@@ -1,0 +1,7 @@
+.results {
+  padding-top: calc(var(--base-spacing) * 2);
+}
+
+.results table {
+  width: 16em;
+}
