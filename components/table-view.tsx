@@ -1,16 +1,10 @@
 import { FunctionComponent } from 'react';
 import moment from 'moment';
+import { getFormattedDate } from '../utils/date-formatter';
 import { Result } from './results';
 
 interface Props {
   results: Result[];
-}
-
-function getFormattedDate(date: string): string {
-  const formattedDate = new Date(date);
-  const options = { year: '2-digit', month: '2-digit', day: '2-digit' };
-
-  return formattedDate.toLocaleString('default', options);
 }
 
 function getTimeDifference(previous: string, current: string): JSX.Element {

@@ -2,6 +2,12 @@
   padding-top: calc(var(--base-spacing) * 2);
 }
 
+.results-body {
+  display: flex;
+}
+
 .results table {
-  width: 24em;
+  min-width: 300px;
+  width: 300px;
+  margin-right: calc(var(--base-spacing) * 4);
 }

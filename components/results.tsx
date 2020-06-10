@@ -1,4 +1,5 @@
 import { FunctionComponent, useEffect, useState } from 'react';
+import GraphView from './graph-view';
 import TableView from './table-view';
 import styles from './results.module.css';
 
@@ -18,7 +19,10 @@ const Results: FunctionComponent<{}> = () => {
   return (
     <div className={styles.results}>
       <h2>Results</h2>
-      <TableView results={results} />
+      <div className={styles['results-body']}>
+        <TableView results={results} />
+        <GraphView results={results} />
+      </div>
     </div>
   );
 };

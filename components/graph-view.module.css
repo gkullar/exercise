@@ -1,0 +1,56 @@
+.line {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.dot {
+  fill: var(--blue);
+  stroke: #fff;
+}
+
+.x-axis,
+.y-axis {
+  font-family: 'Poppins', sans-serif;
+}
+
+.label {
+  font-size: var(--size-s);
+  font-weight: bold;
+  text-anchor: middle;
+}
+
+.graph {
+  width: auto;
+  height: 100%;
+  position: relative;
+  padding: calc(var(--base-spacing) * 2);
+  border-radius: calc(var(--base-spacing) / 2);
+  background-color: #fff;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.tooltip {
+  position: absolute;
+  max-width: 140px;
+  padding: var(--base-spacing);
+  background: #3e3c41;
+  color: #fff;
+  border-radius: 5px;
+  font-size: var(--size-s);
+  text-align: center;
+  pointer-events: none;
+  animation: fadeIn ease-in 300ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
