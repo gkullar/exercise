@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState } from 'react';
+import { FunctionComponent } from 'react';
 import GraphView from './graph-view';
 import TableView from './table-view';
 import styles from './results.module.css';
@@ -8,20 +8,17 @@ export interface Result {
   time: string;
 }
 
-const Results: FunctionComponent<{}> = () => {
-  const [results, setResults] = useState<Result[]>([]);
+interface Props {
+  data: Result[];
+}
 
-  useEffect(() => {
-    const data: Result[] = require('../data.json');
-    setResults(data);
-  }, []);
-
+const Results: FunctionComponent<Props> = ({ data }) => {
   return (
     <div className={styles.results}>
       <h2>Results</h2>
       <div className={styles['results-body']}>
-        <TableView results={results} />
-        <GraphView results={results} />
+        <TableView results={data} />
+        <GraphView results={data} />
       </div>
     </div>
   );
